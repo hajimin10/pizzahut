@@ -1,0 +1,54 @@
+@charset 'utf-8';
+@import url("https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css");
+
+:root {
+    font-size: 100%; /* 16px --> 1rem */
+    font-size: 62.5%; /* fz62.5p --> 10Px --> 1rem */
+    --main-color: #da1a32;
+    --sub-color: #ffd700;
+    --bg-color: #151515;
+}
+
+::selection {
+    background: var(--main-color);
+    color: #fff;
+}
+
+body {
+    font: 2.4em/1.5 Pretendard, sans-serif;
+    word-break: keep-all; /* 어절 단위 줄바꿈 */
+    text-transform: capitalize; /* 영문 첫 시작 글자 대문자  */
+}
+
+hr,
+.hidden {
+    position: absolute;
+    margin: -1px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+button {
+    background-color: transparent; /* 배경색 투명하게 */
+    cursor: pointer; /* 포인터 모양 */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+.inner {
+    width: 1440px;
+    margin: 0 auto;
+}

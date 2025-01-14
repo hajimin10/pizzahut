@@ -1,0 +1,500 @@
+#header {
+    /* background: #5f5; */
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+}
+
+#header nav {
+    height: 8.5rem;
+    background: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* background: #f5f; */
+    padding: 0 30px;
+}
+
+#main > section {
+    padding: 140px 0;
+}
+
+#main > section.video {
+    padding: 0;
+}
+
+.logo {
+    width: 228px;
+    height: 85px;
+    align-items: center;
+}
+
+.gnb {
+    display: flex;
+    padding: 0 266px 0 266px;
+}
+
+.sec-title {
+    font-weight: 800;
+    font-size: 75px;
+}
+
+.gnb li a {
+    font-weight: 400;
+    /* border: 1px solid #000; */
+    padding: 2.8rem 4.4rem;
+}
+
+.util-menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+}
+
+.btn-search {
+    width: 3.5rem;
+    height: 3.5rem;
+    /* border: 1px solid #000; */
+
+    /* 중앙정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 아이콘 폰트기에 글자 속성으로 조절 가능 */
+
+    font-size: 2.9rem;
+}
+.btn-shopping {
+    width: 3.5rem;
+    height: 3.5rem;
+    /* border: 1px solid #000; */
+
+    /* 중앙정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 아이콘 폰트기에 글자 속성으로 조절 가능 */
+
+    font-size: 2.9rem;
+}
+.btn-information {
+    width: 3.5rem;
+    height: 3.5rem;
+    /* border: 1px solid #000; */
+
+    /* 중앙정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 아이콘 폰트기에 글자 속성으로 조절 가능 */
+
+    font-size: 3.5rem;
+}
+
+.video-wrap {
+    aspect-ratio: 16/9;
+    /* background: skyblue; */
+}
+.video-wrap iframe {
+    width: 100%;
+    height: 100%;
+    vertical-align: top;
+}
+
+.order-list {
+    display: flex;
+    align-items: center;
+    /* background: #5f5; */
+    width: 1011px;
+    margin: 0 auto;
+    /* border: 1px solid #000; */
+    justify-content: space-between;
+}
+
+.order-list li {
+    width: 287px;
+    height: 158px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+}
+
+.order-list li figure {
+    width: 47px;
+    height: 47px;
+}
+
+.order-list li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column; /* 세로정렬 */
+    justify-content: center; /* 세로정렬 */
+    align-items: center; /* 가로정렬 */
+}
+
+.order-list li p {
+    margin-top: 10px;
+    font-weight: 600;
+    font-size: 35px;
+    color: #444;
+}
+
+.order-list li p span {
+    color: var(--main-color);
+}
+.menu .inner {
+    height: 1650px;
+}
+
+.menu {
+    background: var(--sub-color);
+    margin: 0 auto;
+    /* border: 1px solid #000; */
+}
+
+.menu .sec-title {
+    font-weight: 800;
+    font-size: 75px;
+}
+
+.menu-slider {
+    /* background: #5f5; */
+    margin-top: 100px;
+    /* border: 1px solid #000; */
+}
+
+.menu-slider .swiper-slide a {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid #000; */
+    width: 1435px;
+    height: 447px;
+    margin-bottom: 60px;
+
+    /* background: #f5f; */
+}
+
+.menu-slider .swiper-slide figure {
+    width: 646px;
+    height: 447px;
+    /* background: skyblue; */
+}
+
+.menu-slider .swiper-slide figure img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.menu-con {
+    /* background: forestgreen; */
+    width: 653px;
+    height: 100%;
+
+    display: flex; /* 가로정렬 */
+    align-items: center; /* 세로정렬 */
+}
+
+.menu-con > div {
+    /* border: 1px solid #000; */
+    width: 100%;
+}
+
+.menu-con strong {
+    font-weight: 500;
+    font-size: 3.5rem;
+}
+
+.menu-con h3 {
+    font-weight: 800;
+    font-size: 6.4rem;
+}
+
+.menu-con p {
+    font-weight: 400;
+    font-size: 2.1rem;
+    color: rgba(0, 0, 0, 0.6);
+}
+
+.menu-info {
+    display: flex;
+    gap: 10px;
+    margin-top: 19px;
+    /* background: #f00; */
+}
+
+.menu-info li {
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #fff;
+    /* border: 1px solid rgba(0, 0, 0, 0.5); */
+    background: rgba(0, 0, 0, 0.5);
+    padding: 1.2rem 1.4rem;
+    height: 3.2rem;
+    border-radius: 50px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu-slider .swiper-slide:nth-of-type(2) a {
+    flex-direction: row-reverse; /* 반대방향으로 정렬 */
+}
+
+.story {
+    background: var(--main-color);
+}
+
+.story .inner {
+    width: 1440px;
+    height: 1000px;
+    margin: 0 auto;
+}
+
+.story .sec-title {
+    font-weight: 800;
+    font-size: 75px;
+    color: #fff;
+    text-align: center;
+}
+
+.story-list {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+}
+
+.story-list li figure {
+    width: 345px;
+    height: 600px;
+}
+
+.story-list a {
+    display: inline;
+    position: relative;
+}
+
+.story-list a img {
+    display: block;
+}
+
+/* .story-list a::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0); /* 투명도 조절 */
+
+/* transition: 0.4s; */
+
+/* .story-list a:hover::after {
+    background: rgba(0, 0, 0, 0.5);
+} */
+
+.story-list .story-con {
+    position: absolute;
+    top: 0;
+    padding: 0;
+    background: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    font-size: 40px;
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+
+    /* 효과주기 전 */
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.story-list a:hover .story-con {
+    /* 변했으면 하는 명령 */
+    opacity: 1;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.story .btn {
+    font-weight: 600;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 234px;
+    padding: 19px 43px;
+
+    /* border: 1px solid #000; */
+    border-radius: 50px;
+    background: #fff;
+    margin: 100px auto 0;
+
+    transition: 0.4s;
+}
+
+.story .btn::after {
+    content: "";
+    display: block;
+    width: 23px;
+    height: 23px;
+    /* border: 1px solid #000; */
+    background: url(../img/button.png) no-repeat 50%;
+    filter: invert(0);
+    margin-left: 6px;
+
+    transition: 0.4s;
+}
+
+.story .btn:hover::after {
+    filter: invert(1);
+}
+
+.story .btn:hover {
+    background: #000;
+    color: #fff;
+}
+
+.news {
+    margin: 0 auto;
+}
+
+.news .sec-title {
+    text-align: center;
+}
+
+.news-slider-wrap {
+    margin-top: 100px;
+    position: relative;
+    padding-bottom: 60px;
+}
+
+.news-slider .swiper-slide figure {
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    border-radius: 100px;
+    overflow: hidden;
+}
+.news-slider .swiper-slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.news-slider .swiper-slide p {
+    text-align: center;
+    margin-top: 30px;
+
+    font-weight: 600;
+    font-size: 24px;
+    /* 줄간격 꼭 신경쓰기 */
+    line-height: 29px;
+}
+
+.news-slider-wrap button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    /* border: 1px solid #000; */
+    width: 70px;
+    height: 70px;
+}
+
+.news-slider-wrap button.btn-prev {
+    left: -100px;
+}
+.news-slider-wrap button.btn-next {
+    right: -100px;
+}
+
+#footer {
+    background: #151515;
+    padding: 98px 216px 194px 160px;
+
+    height: 457px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+#footer * {
+    color: #e3e3e3;
+}
+
+.foot-logo {
+    width: 180px;
+    height: 31px;
+}
+
+.foot-con {
+    /* margin-left: 180px;
+    margin-right: 156px; */
+    width: 892px;
+    height: 165px;
+}
+
+.foot-link {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.foot-link ul {
+    display: flex;
+    gap: 58px;
+}
+
+.foot-copyright {
+    font-weight: 300;
+    font-size: 15px;
+    line-height: 30px;
+
+    margin-top: 30px;
+}
+
+.foot-copyright p {
+    display: inline-block;
+}
+
+.foot-copyright p:first-child,
+.foot-copyright p:last-child {
+    display: block;
+}
+
+.foot-sns {
+    display: flex;
+    gap: 21px;
+    justify-content: center;
+}
+
+.foot-sns li {
+    width: 48px;
+    height: 48px;
+    /* border: 1px solid #f00; */
+}
+
+.foot-sns li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.foot-sns li img {
+    width: 100%;
+    height: 100%;
+}

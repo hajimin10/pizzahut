@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>피자헛</title>
+        <!-- CDN  -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="css/style.css" />
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    </head>
+    <body>
+        <a href="#main" class="hidden">본문 바로가기</a>
+        <hr />
+
+        <!-- s:header -->
+        <header id="header">
+            <nav>
+                <h1 class="logo">
+                    <a href="#"><img src="./img/logo.jpg" alt="피자헛" /></a>
+                </h1>
+
+                <ul class="gnb">
+                    <li>
+                        <a href="#"><i>메뉴</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>주문</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>이벤트&제휴</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>창업안내</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>피자헛 소식</i></a>
+                    </li>
+                </ul>
+
+                <div class="util-menu">
+                    <button type="button" class="btn-search">
+                        <i class="ri-search-line"></i>
+                        <i class="hidden">검색</i>
+                    </button>
+                    <button type="button" class="btn-shopping">
+                        <i class="ri-shopping-bag-fill"></i>
+                        <i class="hidden">장바구니</i>
+                    </button>
+                    <button type="button" class="btn-information">
+                        <i class="ri-account-circle-line"></i>
+                        <i class="hidden">마이페이지</i>
+                    </button>
+                </div>
+            </nav>
+        </header>
+        <hr />
+        <!--//e: header -->
+
+        <!-- s:main -->
+        <main id="main">
+            <!-- 메인 비주얼 -->
+            <section class="video">
+                <h2 class="hidden">피자헛 광고</h2>
+                <div class="video-wrap">
+                    <iframe
+                        src="https://www.youtube.com/embed/HlGpm5rxBBE?si=Zl3MDIkj2o9ji14h&amp;controls=0"
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
+                </div>
+            </section>
+            <hr />
+            <!-- //e:메인 비주얼 -->
+
+            <!-- s:주문관련 -->
+            <section class="order">
+                <div class="inner">
+                    <h2 class="hidden">빠른 주문</h2>
+                    <ul class="order-list">
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="./img/icon-4.jpg" alt="배달주문" />
+                                </figure>
+                                <p><span>배달</span>주문</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="./img/icon-5.jpg" alt="포장주문" />
+                                </figure>
+                                <p><span>포장</span>주문</p>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="#">
+                                <figure>
+                                    <img src="./img/icon-6.jpg" alt="마이오더" />
+                                </figure>
+                                <p>마이오더</p>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr />
+            <!-- //e: 주문관련 -->
+
+            <!-- s: 베스트매뉴 -->
+            <section class="menu">
+                <div class="inner">
+                    <h2 class="sec-title">Best menu</h2>
+
+                    <!-- Slider main container -->
+                    <div class="menu-slider">
+                        <!-- Additional required wrapper -->
+                        <div class="">
+                            <!-- Slides -->
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure data-aos="fade-right">
+                                        <img src="./img/menu-1.png" alt="고구마 치즈 피자" />
+                                    </figure>
+                                    <div class="menu-con">
+                                        <div data-aos="fade-left">
+                                            <strong>달콤함과 고소함의 완벽한 밸런스 </strong>
+                                            <h3>고구마 치즈 피자</h3>
+                                            <p>
+                                                달콤한 고구마 무스와 바삭한 도우의 환상적인 조화! 피자 엣지에는 고소한
+                                                고구마 크림이 가득
+                                            </p>
+                                            <ul class="menu-info">
+                                                <li>고구마무스</li>
+                                                <li>고구마크림</li>
+                                                <li>모짜렐라치즈</li>
+                                                <li>허니소스</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure data-aos="fade-left">
+                                        <img src="./img/menu-2.png" alt="콤비네이션 피자" />
+                                    </figure>
+                                    <div class="menu-con">
+                                        <div data-aos="fade-right">
+                                            <strong>클래식한 맛의 정석, 다채로운 조화 </strong>
+                                            <h3>콤비네이션 피자</h3>
+                                            <p>
+                                                다양한 재료들이 한데 어우러져 누구나 즐길 수 있는 클래식한 피자의 대표
+                                                메뉴
+                                            </p>
+                                            <ul class="menu-info">
+                                                <li>페페로니</li>
+                                                <li>올리브</li>
+                                                <li>베이컨</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="#">
+                                    <figure data-aos="fade-right">
+                                        <img src="./img/menu-3.png" alt="리코타 샐러드 피자" />
+                                    </figure>
+                                    <div class="menu-con">
+                                        <div data-aos="fade-left">
+                                            <strong> 고소한 리코타 치즈와 풍성한 토핑의 만남 </strong>
+                                            <h3>리코타 샐러드 피자</h3>
+                                            <p>
+                                                부드럽고 고소한 리코타 치즈와 신선한 토마토, 그리고 다채로운 채소로
+                                                만들어진 피자
+                                            </p>
+                                            <ul class="menu-info">
+                                                <li>리코타치즈</li>
+                                                <li>올리브오일</li>
+                                                <li>모짜렐라치즈</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr />
+            <!-- //e:베스트메뉴 -->
+
+            <!-- s:브랜드 소개 -->
+            <section class="story">
+                <div class="inner">
+                    <h2 class="sec-title">Brand Story</h2>
+                    <ul class="story-list">
+                        <li>
+                            <a href="#">
+                                <figure><img src="./img/brand-pic1.png" alt="브랜드 히스토리" /></figure>
+                                <div class="story-con">
+                                    <p>
+                                        브랜드<br />
+                                        히스토리
+                                    </p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./img/brand-pic2.png" alt="브랜드 철학" /></figure>
+                                <div class="story-con">
+                                    <p>브랜드<br />철학</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./img/brand-pic3.png" alt="글로벌 영향력" /></figure>
+                                <div class="story-con">
+                                    <p>글로벌<br />영향력</p>
+                                </div>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#">
+                                <figure><img src="./img/brand-pic4.png" alt="사회적 책임" /></figure>
+                                <div class="story-con">
+                                    <p>사회적<br />책임</p>
+                                </div>
+                            </a>
+                        </li>
+                    </ul>
+                    <a href="#" class="btn">더 보러가기</a>
+                </div>
+            </section>
+            <hr />
+            <!-- //e:브랜드 소개 -->
+
+            <!-- s:피자헛 소식 -->
+            <section class="news">
+                <div class="inner">
+                    <h2 class="sec-title">News & Announcements</h2>
+
+                    <div class="news-slider-wrap">
+                        <!-- Slider main container -->
+                        <div class="swiper news-slider">
+                            <!-- Additional required wrapper -->
+                            <div class="swiper-wrapper">
+                                <!-- Slides -->
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure><img src="./img/news-icon1.jpg" alt="피자헛 로고" /></figure>
+                                        <p>피자헛, 지역 사회를 위한<br />따뜻한 나눔</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure><img src="./img/news-icon2.jpg" alt="푸드뱅크 기부 활동" /></figure>
+                                        <p>
+                                            푸드뱅크 기부 활동 -<br />
+                                            함께 나누는 피자의 즐거움!
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure><img src="./img/news-icon3.png" alt="소비자 만족도 1위 달성" /></figure>
+                                        <p>피자헛, 2024 소비자 만족도<br />1위 달성!</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="./img/news-icon4.png" alt="서울 강남점 그랜드 오픈" />
+                                        </figure>
+                                        <p>
+                                            서울 강남점 그랜드 오픈!<br />
+                                            특별 혜택을 확인하세요
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure><img src="./img/news-icon1.jpg" alt="피자헛 로고" /></figure>
+                                        <p>피자헛, 지역 사회를 위한<br />따뜻한 나눔</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure><img src="./img/news-icon2.jpg" alt="푸드뱅크 기부 활동" /></figure>
+                                        <p>
+                                            푸드뱅크 기부 활동 -<br />
+                                            함께 나누는 피자의 즐거움!
+                                        </p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure><img src="./img/news-icon3.png" alt="소비자 만족도 1위 달성" /></figure>
+                                        <p>피자헛, 2024 소비자 만족도<br />1위 달성!</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="#">
+                                        <figure>
+                                            <img src="./img/news-icon4.png" alt="서울 강남점 그랜드 오픈" />
+                                        </figure>
+                                        <p>
+                                            서울 강남점 그랜드 오픈!<br />
+                                            특별 혜택을 확인하세요
+                                        </p>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- If we need pagination -->
+                        <div class="swiper-pagination"></div>
+                        <button class="btn-prev">
+                            <img src="./img/icon-l.png" alt="이전" />
+                        </button>
+                        <button class="btn-next">
+                            <img src="./img/icon-r.jpg" alt="다음" />
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <hr />
+        <!-- //e:피자헛 소식 -->
+
+        <!-- s:footer -->
+        <footer id="footer">
+            <strong class="foot-logo"><img src="./img/logo2.png" alt="로고" /></strong>
+
+            <div class="foot-con">
+                <div class="foot-link">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">창업안내</a></li>
+                        <li><a href="#">대표번호 1588-5588(운영시간 10:30 ~ 22:00)</a></li>
+                    </ul>
+                </div>
+                <div class="foot-copyright">
+                    <p>서울시 영등포구 국회대로 74길 4, 9~11층</p>
+                    <p>사업자등록번호 120-81-63948</p>
+                    <p>통신판매업신고번호 제2018-서울영등포-1220호</p>
+                    <p>한국피자헛유한회사 대표이사 : 조윤상</p>
+                    <p>개인정보 보호책임자 : 손정완</p>
+                </div>
+            </div>
+
+            <ul class="foot-sns">
+                <li>
+                    <a href="#"><img src="./img/icon-insta.jpg" alt="인스타그램" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/facebook.png" alt="페이스북" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/twitter.png" alt="트위터" /></a>
+                </li>
+            </ul>
+        </footer>
+        <hr />
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
