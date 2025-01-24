@@ -1,15 +1,18 @@
 #header {
     /* background: #5f5; */
     position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     width: 100%;
 }
 
 #header nav {
     height: 8.5rem;
-    background: #fff;
+
+    background: rgba(255, 255, 255, 0.95);
+    border-bottom: 1px solid #eee;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -26,15 +29,21 @@
     padding: 0;
 }
 
-.logo {
-    width: 228px;
-    height: 85px;
-    align-items: center;
+.logo a {
+    display: block;
+    width: 16.4rem;
+    height: 3.2rem;
+    background: url(../img/logo1.png) no-repeat 0 0 / contain;
 }
 
 .gnb {
     display: flex;
-    padding: 0 266px 0 266px;
+    /* padding: 0 266px; */
+}
+
+/* 햄버거 메뉴 태블릿 전에는 나오지 않게 설정 */
+.btn-menu {
+    display: none;
 }
 
 .sec-title {
@@ -43,9 +52,14 @@
 }
 
 .gnb li a {
-    font-weight: 400;
+    font-weight: 600;
+    font-size: 20px;
     /* border: 1px solid #000; */
     padding: 2.8rem 4.4rem;
+}
+
+.gnb li a:hover {
+    color: var(--main-color);
 }
 
 .util-menu {
@@ -112,23 +126,37 @@
     display: flex;
     align-items: center;
     /* background: #5f5; */
-    width: 1011px;
+
     margin: 0 auto;
     /* border: 1px solid #000; */
     justify-content: space-between;
+
+    gap: 20px;
 }
 
 .order-list li {
-    width: 287px;
-    height: 158px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 400px;
+    width: 39.5648%;
+    height: 150px;
+    border: 2px solid rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
     border-radius: 20px;
+
+    transition: 0.2s;
+}
+.order-list li:hover {
+    border: 2px solid var(--main-color);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .order-list li figure {
-    width: 47px;
-    height: 47px;
+    width: 65px;
+    height: 65px;
+}
+
+.order-list li figure img {
+    width: 100%;
+    height: 100%;
 }
 
 .order-list li a {
@@ -144,16 +172,13 @@
 
 .order-list li p {
     margin-top: 10px;
-    font-weight: 600;
-    font-size: 35px;
+    font-weight: 500;
+    font-size: 24px;
     color: #444;
 }
 
 .order-list li p span {
     color: var(--main-color);
-}
-.menu .inner {
-    height: 1650px;
 }
 
 .menu {
@@ -162,7 +187,7 @@
     /* border: 1px solid #000; */
 }
 
-.menu .sec-title {
+.sec-title {
     font-weight: 800;
     font-size: 75px;
 }
@@ -178,6 +203,7 @@
     justify-content: space-between;
     /* border: 1px solid #000; */
     width: 1435px;
+    width: 99.6528%;
     height: 447px;
     margin-bottom: 60px;
 
@@ -258,7 +284,8 @@
 
 .story .inner {
     width: 1440px;
-    height: 1000px;
+    width: 75%;
+
     margin: 0 auto;
 }
 
@@ -423,6 +450,10 @@
     right: -100px;
 }
 
+.swiper-pagination-bullet-active {
+    background: #000;
+}
+
 #footer {
     background: #151515;
     padding: 98px 216px 194px 160px;
@@ -497,4 +528,465 @@
 .foot-sns li img {
     width: 100%;
     height: 100%;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+
+    bottom: 20px;
+    right: 20px;
+    padding: 0px 0px; /* 버튼의 내부 여백 (크기를 키우는 데 가장 효과적) */
+    font-size: 40px; /* 텍스트 크기 */
+    background-color: #ee3124;
+    color: white;
+    border: none;
+    border-radius: 50px; /* 둥근 모서리 */
+    cursor: pointer;
+    /* display: none; */
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70px; /* 버튼의 고정 너비 */
+    height: 70px; /* 버튼의 고정 높이 */
+    text-align: center;
+
+    opacity: 0; /* 초기 불투명도 0으로 설정 */
+    visibility: hidden; /* 처음에는 보이지 않게 설정 */
+    transition: opacity 1s ease, visibility 1s ease; /* 부드러운 전환 효과 */
+    z-index: 1000;
+}
+
+/* 버튼 hover 효과 */
+#scrollToTopBtn:hover {
+    background-color: #bb2d1a;
+}
+
+/* 버튼 클릭 시 (활성 상태) */
+#scrollToTopBtn:active {
+    background-color: #000000; /* 검은색으로 변화 */
+    color: #ffd700; /* 황금색 텍스트 */
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    /* background-color: #e31837; */
+    /* border-radius: 10px 0 0 10px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px;
+    width: 80px;
+    z-index: 1;
+    /* border: 1px solid #000; */
+
+    border-radius: 20px;
+    background: #fff;
+}
+
+/* Sidebar Item (Image Container) */
+.sidebar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    transition: transform 0.3s, background-color 0.3s;
+
+    border-radius: 50%;
+}
+
+.sidebar-item i {
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    /* border: 1px solid #000; */
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.sidebar-item:hover i {
+    background-color: #ffcc00; /* Highlight color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar.hidden {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* .inner 크기에 맞는 분기점 생성 */
+@media screen and (max-width: 1000px) {
+    .inner {
+        width: 91.6667%;
+    }
+}
+
+/* 분기점 추가하기 */
+@media screen and (max-width: 1200px) {
+    .gnb {
+        display: none;
+    }
+
+    .util-menu {
+        display: none;
+    }
+
+    /* 햄버거 메뉴 설정 */
+    .btn-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 4.8rem;
+        height: 4.8rem;
+        background: url(../img/menu-icon.svg) no-repeat 50%;
+    }
+
+    .story .inner {
+        width: 100%;
+        height: 100%;
+    }
+
+    .story-list {
+        justify-content: initial;
+        gap: 1.2rem;
+    }
+
+    .story-list li {
+        width: 17.1rem;
+        width: 27.2293%;
+
+        min-height: 29.3rem;
+    }
+
+    .story-list li figure {
+        width: 100%;
+        height: 100%;
+    }
+
+    .story .btn {
+        margin-top: 2.5rem;
+    }
+}
+
+/* 태블릿 디자인 */
+@media screen and (max-width: 768px) {
+    #header nav {
+        height: 5.3rem;
+    }
+
+    #main > section {
+        padding: 40px 0;
+    }
+    .order-list {
+        gap: 16px;
+    }
+
+    .sec-title {
+        font-weight: 800;
+        font-size: 5.9rem;
+    }
+
+    .menu-slider .swiper-slide a {
+        /* border: 1px solid #000; */
+        height: 34.5rem;
+        margin-bottom: 0;
+    }
+
+    .menu-slider .swiper-slide figure {
+        width: 34.6rem;
+        height: 34.5rem;
+        /* background: skyblue; */
+    }
+
+    .menu-slider .swiper-slide figure img {
+        width: 100%;
+        height: 100%;
+        object-fit: scale-down;
+    }
+
+    .menu-slider {
+        margin-top: 40px;
+    }
+
+    .menu-con {
+        width: 28.4rem;
+        width: 49.5637%;
+        height: 100%;
+        /* background: #f00; */
+    }
+
+    .menu-con strong {
+        font-weight: 500;
+        font-size: 2rem;
+    }
+
+    .menu-con h3 {
+        font-size: 3.5rem;
+    }
+
+    .menu-con p {
+        font-weight: 400;
+        font-size: 1.5rem;
+    }
+
+    .menu-info {
+        flex-wrap: wrap;
+    }
+
+    .news-slider .swiper-slide figure {
+        border-radius: 0;
+        border: initial;
+    }
+
+    .news-slider .swiper-slide p {
+        font-weight: 500;
+        font-size: 2.2rem;
+    }
+
+    #footer {
+        width: 100%;
+        height: 28.4rem;
+        flex-direction: column;
+        padding: 4.2rem;
+    }
+
+    .foot-con {
+        width: 100%;
+    }
+
+    .foot-logo {
+        width: 100%;
+        display: flex;
+
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+    }
+
+    .news-slider-wrap button {
+        display: none;
+    }
+
+    .foot-link ul {
+        justify-content: space-between;
+        gap: 3.5rem;
+        margin-top: 3rem;
+    }
+
+    .foot-link li a {
+        font-weight: 300;
+        font-size: 1.4rem;
+    }
+
+    .foot-copyright {
+        display: flex;
+        flex-wrap: wrap;
+
+        gap: 2rem;
+        width: 100%;
+    }
+
+    .foot-copyright p:nth-child(1) {
+        display: none;
+    }
+    .foot-copyright p:nth-child(3) {
+        display: none;
+    }
+
+    .foot-sns {
+        margin-top: 3rem;
+    }
+}
+
+/* 모바일 디자인 */
+@media screen and (max-width: 402px) {
+    .inner {
+        width: 90.0498%;
+    }
+
+    #header {
+        width: 40.2rem;
+    }
+
+    #header nav {
+        width: 100%;
+        height: 5rem;
+        padding: 0 15px;
+    }
+
+    .logo a {
+        background-image: url(../img/image.png);
+    }
+
+    .btn-menu {
+        width: 4.5rem;
+        height: 4.5rem;
+    }
+
+    .order-list li {
+        width: 11.2rem;
+        height: 8rem;
+    }
+
+    .order-list li figure {
+        width: 3rem;
+        height: 3rem;
+    }
+
+    .order-list li p {
+        font-size: 1.6rem;
+    }
+
+    .sec-title {
+        font-size: 3rem;
+    }
+
+    .menu-slider .swiper-slide:nth-of-type(2) a {
+        flex-direction: initial;
+    }
+
+    .menu-con {
+        width: 17rem;
+        /* height: 15.7rem; */
+    }
+
+    .menu-con h3 {
+        font-size: 2rem;
+    }
+
+    .menu-con strong {
+        display: none;
+    }
+
+    .menu-con h3 {
+        text-align: center;
+    }
+
+    .menu-con p {
+        text-align: center;
+    }
+
+    .menu-info {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .menu-info li {
+        font-size: 1.2rem;
+    }
+
+    .menu-slider {
+        display: flex;
+        /* border: 3px solid #f00; */
+        width: 100%;
+        overflow-x: scroll;
+        margin-top: 15px;
+    }
+
+    .menu-slider .swiper-slide {
+        /* border: 1px solid #000; */
+    }
+
+    .menu-slider .swiper-slide figure {
+        flex-shrink: 0; /* 줄어들지 않게 설정 */
+        width: 18.8rem;
+    }
+
+    .story .sec-title {
+        font-size: 3rem;
+    }
+
+    .story-list {
+        flex-wrap: wrap;
+        gap: 2rem;
+        justify-content: center;
+        margin-top: 50px;
+    }
+
+    .story-list li {
+        width: 171px;
+    }
+
+    .story-list .story-con {
+        font-weight: 600;
+        font-size: 2rem;
+        line-height: 40px;
+    }
+
+    .story .btn {
+        display: none;
+    }
+
+    .news-slider-wrap {
+        margin-top: 50px;
+    }
+
+    .news-slider .swiper-slide p {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: none;
+    }
+
+    .sidebar {
+        display: none;
+    }
+
+    #footer {
+        width: 100%;
+        height: 24rem;
+        padding: 11px 0;
+    }
+
+    .foot-sns {
+        margin-top: 0;
+    }
+
+    .foot-sns li {
+        width: 2.8rem;
+        height: 2.8rem;
+        margin-top: 0;
+    }
+
+    .foot-link {
+        margin-top: 20px;
+    }
+
+    .foot-link ul {
+        justify-content: center;
+        gap: 1.3rem;
+        margin-top: 0;
+    }
+
+    .foot-copyright {
+        gap: 1rem;
+
+        justify-content: center;
+        margin-top: 10px;
+        line-height: initial;
+    }
+
+    .foot-link li:nth-child(4) {
+        display: none;
+    }
+    .foot-link li:nth-child(5) {
+        display: none;
+    }
+
+    .foot-copyright p:nth-child(3) {
+        display: initial;
+    }
+    .foot-copyright p:nth-child(4) {
+        display: none;
+    }
+
+    #scrollToTopBtn {
+        width: 44px;
+        height: 44px;
+    }
 }
