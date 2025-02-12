@@ -50,5 +50,178 @@ img {
 
 .inner {
     width: 1440px;
+    width: 75%;
+
     margin: 0 auto;
+}
+
+#header {
+    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+}
+
+#header.hide {
+    top: -100px;
+    transition: 0.25s;
+}
+
+#header nav {
+    height: 8.5rem;
+
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    /* background: #f5f; */
+    padding: 0 30px;
+}
+
+/* 서브메뉴 바탕 역할*/
+header::after {
+    content: "";
+    display: block;
+    position: absolute;
+
+    top: -215px; /* height의 크기 만큼 */
+    left: 0;
+    width: 100%;
+    height: 300px;
+    transition: 0.3s;
+    background: rgba(255, 255, 255, 0.95);
+}
+
+header.active::after {
+    top: 0;
+}
+
+#main > section {
+    padding: 140px 0;
+}
+
+#main > section.video {
+    padding: 0;
+}
+
+.logo {
+    z-index: 1;
+}
+
+.logo a {
+    display: block;
+    width: 16.4rem;
+    height: 3.2rem;
+    background: url(../img/main-img/logo1.png) no-repeat 0 0 / contain;
+}
+
+.gnb {
+    display: flex;
+    /* padding: 0 266px; */
+    z-index: 1;
+}
+
+/* 햄버거 메뉴 태블릿 전에는 나오지 않게 설정 */
+.btn-menu {
+    display: none;
+}
+
+.sec-title {
+    font-weight: 800;
+    font-size: 75px;
+}
+
+.gnb li a {
+    font-weight: 600;
+    font-size: 20px;
+
+    /* border: 1px solid #000; */
+    padding: 2.8rem 4.4rem;
+}
+
+.gnb li a:hover {
+    color: var(--main-color);
+}
+
+.gnb > li {
+    position: relative;
+}
+
+.submenu {
+    position: absolute;
+    /* top: 46px; li의 세로 크기만큼  */
+    top: 100%;
+    left: 0;
+    z-index: 1;
+
+    width: 100%;
+
+    margin-top: 25px;
+
+    /* jQuery를 위한 준비 */
+    display: none;
+}
+
+.submenu li a {
+    /* border: 1px solid #000; */
+    padding: 10px;
+    text-align: center;
+    display: block;
+
+    font-weight: 400;
+    font-size: 17px;
+}
+
+.util-menu {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    height: 100%;
+    z-index: 1;
+}
+
+.btn-search {
+    width: 3.5rem;
+    height: 3.5rem;
+    /* border: 1px solid #000; */
+
+    /* 중앙정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 아이콘 폰트기에 글자 속성으로 조절 가능 */
+
+    font-size: 2.9rem;
+}
+.btn-shopping {
+    width: 3.5rem;
+    height: 3.5rem;
+    /* border: 1px solid #000; */
+
+    /* 중앙정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 아이콘 폰트기에 글자 속성으로 조절 가능 */
+
+    font-size: 2.9rem;
+}
+.btn-information {
+    width: 3.5rem;
+    height: 3.5rem;
+    /* border: 1px solid #000; */
+
+    /* 중앙정렬 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* 아이콘 폰트기에 글자 속성으로 조절 가능 */
+
+    font-size: 3.5rem;
 }

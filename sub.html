@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>피자헛 메뉴</title>
+
+        <!-- CDN  -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/sub.css" />
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="./js/script.js"></script>
+    </head>
+
+    <body>
+        <a href="#main" class="hidden">메뉴 바로가기</a>
+        <hr />
+
+        <!-- s:header -->
+        <header id="header">
+            <nav>
+                <h1 class="logo">
+                    <a href="./main.html">
+                        <i class="hidden">pizza hut</i>
+                    </a>
+                </h1>
+                <ul class="gnb">
+                    <li>
+                        <a href="#"><i>메뉴</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">전체 메뉴</a></li>
+                            <li><a href="#">피자 메뉴</a></li>
+                            <li><a href="#">사이드 메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i>주문</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">단체주문</a></li>
+                            <li><a href="#">E쿠폰 주문</a></li>
+                            <li><a href="#">지류 상품권</a></li>
+                            <li><a href="#">모바일 상품권</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i>이벤트&제휴</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">제휴할인</a></li>
+                            <li><a href="#">사이드 메뉴</a></li>
+                            <li><a href="#">멤버십</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i>창업안내</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">성공창업관</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i>피자헛 소식</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="util-menu">
+                    <button type="button" class="btn-search">
+                        <i class="ri-search-line"></i>
+                        <i class="hidden">검색</i>
+                    </button>
+                    <button type="button" class="btn-shopping">
+                        <i class="ri-shopping-bag-fill"></i>
+                        <i class="hidden">장바구니</i>
+                    </button>
+                    <button type="button" class="btn-information">
+                        <i class="ri-account-circle-line"></i>
+                        <i class="hidden">마이페이지</i>
+                    </button>
+                </div>
+                <!-- button:button.btn-menu>i.hidden{메뉴} -->
+                <!--태블릿 햄버거 메뉴 만들기 -->
+                <button type="button" class="btn-menu">
+                    <i class="hidden">메뉴</i>
+                </button>
+            </nav>
+        </header>
+        <hr />
+        <!--//e: header -->
+
+        <!-- s:주문 프로모션 -->
+        <section class="order">
+            <div class="inner">
+                <h2 class="hidden">빠른 주문</h2>
+                <ul class="order-list">
+                    <li>
+                        <a href="#">
+                            <strong>포장</strong>
+                            <p class="money">10,000원 <span>할인</span></p>
+                            <p>※매장별,사이즈별 금액 상이</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <strong>배달</strong>
+                            <p class="money">8,000원 <span>할인</span></p>
+                            <p>※매장별,사이즈별 금액 상이</p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <hr />
+        <!-- //e:주문 프로모션 -->
+
+        <section class="menu">
+            <div class="inner">
+                <div class="sub-title-wrap">
+                    <h2>MENU</h2>
+                    <div class="menu-con">
+                        <p>HOME</p>
+                        <p>MENU</p>
+                        <p>PIZZA</p>
+                    </div>
+                </div>
+
+                <!-- s:메뉴바-->
+                <ul class="menu-gnb">
+                    <li>
+                        <a href="#"><i>피자</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>하프앤하프</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>세트</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>파스타&치킨</i></a>
+                    </li>
+                    <li>
+                        <a href="#"><i>사이드&음료</i></a>
+                    </li>
+                </ul>
+                <div class="menu-gnb-sub">
+                    <a href="#">
+                        <p>클래식 피자</p>
+                    </a>
+                    <a href="#">
+                        <p>프리미엄 피자</p>
+                    </a>
+                    <a href="#">
+                        <p>더블 치즈 피자</p>
+                    </a>
+                </div>
+                <!-- //e:메뉴바 -->
+
+                <!-- s:메뉴 리스트 -->
+                <ul class="menu-list">
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image.png" alt="#" />
+                            </figure>
+                            <strong>콤비네이션 치즈딥</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>29,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>19,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-4.png" alt="#" />
+                            </figure>
+                            <strong>페페로니 치즈딥</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>19,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>17,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-6.png" alt="#" />
+                            </figure>
+                            <strong>LA BBQ 불고기 치즈딥</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>23,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>21,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-9.png" alt="#" />
+                            </figure>
+                            <strong>골든 콘 하베스트</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>29,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>19,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-3.png" alt="#" />
+                            </figure>
+                            <strong>콤비네이션</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>19,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>17,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-5.png" alt="#" />
+                            </figure>
+                            <strong>페페로니 러버</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>17,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>15,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-7.png" alt="#" />
+                            </figure>
+                            <strong>LA BBQ 불고기 </strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>21,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>19,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-10.png" alt="#" />
+                            </figure>
+                            <strong>치즈 러버</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>15,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>13,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-2.png" alt="#" />
+                            </figure>
+                            <strong>멜팅치즈 포테이토</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>19,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>17,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-5.png" alt="#" />
+                            </figure>
+                            <strong>알로하 하와이</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>19,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>17,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-8.png" alt="#" />
+                            </figure>
+                            <strong>할라 페페로니 러버</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>18,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>16,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <figure>
+                                <img src="./img/sub-img/image-11.png" alt="#" />
+                            </figure>
+                            <strong>베지 러버</strong>
+                            <dl>
+                                <dt>L</dt>
+                                <dd>15,900원~</dd>
+                                <dt>배달</dt>
+                                <dd><span>21,900</span>원~</dd>
+                                <dt>포장</dt>
+                                <dd><span>13,900</span>원~</dd>
+                            </dl>
+                            <p>회원전용</p>
+                        </a>
+                    </li>
+                </ul>
+                <!-- //e:메뉴 리스트 -->
+            </div>
+        </section>
+
+        <!-- s:footer -->
+        <footer id="footer">
+            <strong class="foot-logo"><img src="./img/main-img/logo2.png" alt="로고" /></strong>
+
+            <div class="foot-con">
+                <div class="foot-link">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">창업안내</a></li>
+                        <li>
+                            <a href="#">대표번호 1588-5588(운영시간 10:30 ~ 22:00)</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="foot-copyright">
+                    <p>서울시 영등포구 국회대로 74길 4, 9~11층</p>
+                    <p>사업자등록번호 120-81-63948</p>
+                    <p>통신판매업신고번호 제2018-서울영등포-1220호</p>
+                    <p>한국피자헛유한회사 대표이사 : 조윤상</p>
+                    <p>개인정보 보호책임자 : 손정완</p>
+                </div>
+            </div>
+
+            <ul class="foot-sns">
+                <li>
+                    <a href="#"><img src="./img/main-img/icon-insta.jpg" alt="인스타그램" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/main-img/facebook.png" alt="페이스북" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/main-img/twitter.png" alt="트위터" /></a>
+                </li>
+            </ul>
+        </footer>
+        <hr />
+
+        <!-- Sidebar Container -->
+        <div class="sidebar">
+            <a href="#order" class="sidebar-item">
+                <i class="ri-map-pin-line"></i>
+            </a>
+            <a href="#contact" class="sidebar-item">
+                <i class="ri-headphone-line"></i>
+            </a>
+        </div>
+
+        <button id="scrollToTopBtn">↑</button>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
