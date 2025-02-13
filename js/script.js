@@ -33,28 +33,7 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 버튼 요소 가져오기
-    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
-
-    // 스크롤 이벤트 감지
-    window.addEventListener("scroll", () => {
-        if (window.scrollY > 300) {
-            // 스크롤이 300px 이상 내려가면 버튼 표시
-            scrollToTopBtn.style.opacity = "1";
-            scrollToTopBtn.style.visibility = "visible";
-        } else {
-            // 그렇지 않으면 버튼 숨김
-            scrollToTopBtn.style.opacity = "0";
-            scrollToTopBtn.style.visibility = "hidden";
-        }
-    });
-
-    // 버튼 클릭 이벤트
-    scrollToTopBtn.addEventListener("click", () => {
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth", // 부드럽게 스크롤
-        });
-    });
+    const scrollToTopBtn = $("#scrollToTopBtn");
 
     const $header = $("#header"); // 헤더 선택
     const $menu = $(".gnb > li"); // 메뉴 선택
@@ -101,5 +80,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // 마지막 스크롤 값을 갱신
         lastScrollTop = scrollTop;
+
+        if (scrollTop > 300) {
+            scrollToTopBtn.fadeIn();
+        } else {
+            scrollToTopBtn.fadeOut();
+        }
     });
 });

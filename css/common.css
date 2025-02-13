@@ -9,6 +9,10 @@
     --bg-color: #151515;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 ::selection {
     background: var(--main-color);
     color: #fff;
@@ -53,6 +57,30 @@ img {
     width: 75%;
 
     margin: 0 auto;
+}
+
+#scrollToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    padding: 0px 0px; /* 버튼의 내부 여백 (크기를 키우는 데 가장 효과적) */
+    font-size: 45px; /* 텍스트 크기 */
+    background-color: #ee3124;
+    color: white;
+    border-radius: 50px; /* 둥근 모서리 */
+
+    z-index: 1000;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    width: 70px; /* 버튼의 고정 너비 */
+    height: 70px; /* 버튼의 고정 높이 */
+    text-align: center;
+
+    display: none;
+}
+
+/* 버튼 hover 효과 */
+#scrollToTopBtn:hover {
+    background-color: #bb2d1a;
 }
 
 #header {
@@ -224,4 +252,58 @@ header.active::after {
     /* 아이콘 폰트기에 글자 속성으로 조절 가능 */
 
     font-size: 3.5rem;
+}
+
+/* Sidebar Styling */
+.sidebar {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    /* background-color: #e31837; */
+    /* border-radius: 10px 0 0 10px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 5px 5px;
+    width: 80px;
+    z-index: 1;
+    /* border: 1px solid #000; */
+
+    border-radius: 20px;
+    background: #fff;
+}
+
+/* Sidebar Item (Image Container) */
+.sidebar-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+    transition: transform 0.3s, background-color 0.3s;
+
+    border-radius: 50%;
+}
+
+.sidebar-item i {
+    font-size: 40px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); */
+    /* border: 1px solid #000; */
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+/* Hover Effect */
+.sidebar-item:hover i {
+    background-color: #ffcc00; /* Highlight color */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.sidebar.hidden {
+    opacity: 0;
+    visibility: hidden;
 }
