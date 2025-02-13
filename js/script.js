@@ -66,7 +66,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 메뉴 영역에 마우스가 들어오면
     $menu.on("mouseenter", function () {
         $subMenu.stop().slideDown(duration); // 서브메뉴 슬라이드 다운
-        $menu.addClass("on");
+        $(this).addClass("on");
         $header.addClass("active");
     });
 
