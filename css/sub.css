@@ -83,7 +83,7 @@ section {
     font-size: 35px;
     border-bottom: 2px solid #000;
 
-    line-height: 82px;
+    display: inline;
 }
 
 .menu-con {
@@ -111,7 +111,7 @@ section {
 
     width: 15px;
     height: 15px;
-    background: url(../img/sub-img/menu-con.png) no-repeat 50%;
+    background: url(../img/menu-con.png) no-repeat 50%;
 }
 
 .menu-con p:nth-of-type(3):after {
@@ -340,7 +340,7 @@ dl dt:not(:first-of-type) {
         align-items: center;
         width: 4.8rem;
         height: 4.8rem;
-        background: url(../img/main-img/menu-icon.svg) no-repeat 50%;
+        background: url(../img/menu-icon.svg) no-repeat 50%;
     }
 }
 
@@ -421,7 +421,7 @@ dl dt:not(:first-of-type) {
         align-items: center;
         width: 4.8rem;
         height: 4.8rem;
-        background: url(../img/main-img/menu-icon.svg) no-repeat 50%;
+        background: url(../img/menu-icon.svg) no-repeat 50%;
     }
 
     .order {
@@ -510,7 +510,7 @@ dl dt:not(:first-of-type) {
     }
 
     .logo a {
-        background-image: url(../img/main-img/image.png);
+        background-image: url(../img/image.png);
     }
 
     .btn-menu {

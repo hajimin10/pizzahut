@@ -87,4 +87,88 @@ document.addEventListener("DOMContentLoaded", function () {
             scrollToTopBtn.fadeOut();
         }
     });
+
+    //대상을 변수에 저장
+    const $tabMenu = $(".tab-menu li");
+    const $tabItem = $(".tab-item");
+
+    console.log($tabMenu, $tabItem);
+
+    //준비작업
+    tabAction(0);
+    // $tabItem.hide();
+    // $tabItem.eq(0).show();
+
+    // $tabMenu.removeClass("active");
+    // $tabMenu.eq(0).addClass("active");
+
+    //탭메뉴를 클릭하면
+    $tabMenu.on("click", function (e) {
+        //a의 기본동작(링크 이동)을 막기
+        e.preventDefault();
+
+        //인덱스를 구하기: index()
+        const idx = $(this).index();
+
+        tabAction(idx);
+
+        // //모든 탭 아이템을 숨기고
+        // $tabItem.hide();
+
+        // //인덱스 적용하기: eq(인덱스)
+        // //클릭한 탭 메뉴에 해당하는 탭 아이템을 보여줌
+        // $tabItem.eq(idx).show();
+
+        // //모든 탭 메뉴에서 활성화 클래스를 제거하고
+        // $tabMenu.removeClass("active");
+
+        // //클릭한 탭 메뉴에 활성화 클래스 추가
+        // $tabMenu.eq(idx).addClass("active");
+    });
+
+    //3초에 한 번씩 탭이 전환
+    // setInterval(동작,시간)
+    // let num = 0;
+    // setInterval(() => {
+    //     if (num < $tabMenu.length - 1) {
+    //         num++;
+    //     } else {
+    //         num = 0;
+    //     }
+    //     tabAction(num);
+    // }, 3000);
+
+    // setInterval(() => {
+    //     num = (num + 1) % $tabMenu.length;
+    //     tabAction(num);
+    // }, 1000);
+
+    //중복된 동작을 함수로 정의
+    function tabAction(index) {
+        $tabItem.hide();
+        $tabItem.eq(index).show();
+
+        $tabMenu.removeClass("active");
+        $tabMenu.eq(index).addClass("active");
+    }
+
+    $(".tab-menu li a").click(function (e) {
+        e.preventDefault();
+
+        // 모든 탭에서 active 클래스 제거
+        $(".tab-menu li").removeClass("active");
+        $(".tab-item").hide();
+
+        // 클릭한 탭에 active 클래스 추가
+        $(this).parent().addClass("active");
+
+        // 해당하는 콘텐츠 보이기
+        var target = $(this).attr("href");
+        $(target).show();
+    });
+
+    // 초기 상태 설정 (첫 번째 탭 활성화)
+    $(".tab-menu li:first-child").addClass("active");
+    $(".tab-item").hide();
+    $(".tab-item:first").show();
 });

@@ -274,7 +274,7 @@
     width: 23px;
     height: 23px;
     /* border: 1px solid #000; */
-    background: url(../img/main-img/button.png) no-repeat 50%;
+    background: url(../img/button.png) no-repeat 50%;
     filter: invert(0);
     margin-left: 6px;
 
@@ -347,76 +347,6 @@
     background: #000;
 }
 
-#footer {
-    background: #151515;
-    padding: 98px 216px 194px 160px;
-
-    /* height: 457px; */
-
-    display: flex;
-    justify-content: space-between;
-}
-
-#footer * {
-    color: #e3e3e3;
-}
-
-.foot-logo {
-    width: 180px;
-
-    height: 31px;
-}
-
-.foot-link {
-    font-weight: 300;
-    font-size: 18px;
-}
-
-.foot-link ul {
-    display: flex;
-    gap: 58px;
-}
-
-.foot-copyright {
-    font-weight: 300;
-    font-size: 15px;
-    line-height: 30px;
-
-    margin-top: 30px;
-}
-
-.foot-copyright p {
-    display: inline-block;
-}
-
-.foot-copyright p:first-child,
-.foot-copyright p:last-child {
-    display: block;
-}
-
-.foot-sns {
-    display: flex;
-    gap: 21px;
-    justify-content: center;
-}
-
-.foot-sns li {
-    width: 48px;
-    height: 48px;
-    /* border: 1px solid #f00; */
-}
-
-.foot-sns li a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-
-.foot-sns li img {
-    width: 100%;
-    height: 100%;
-}
-
 /* 중간 분기점 생성 */
 
 @media screen and (max-width: 1474px) {
@@ -434,11 +364,12 @@
         align-items: center;
         width: 4.8rem;
         height: 4.8rem;
-        background: url(../img/main-img/menu-icon.svg) no-repeat 50%;
+        background: url(../img/menu-icon.svg) no-repeat 50%;
     }
 
     .menu-con {
         width: 42rem;
+        z-index: 1000;
     }
 
     .menu-con strong {
@@ -664,7 +595,7 @@
     }
 
     .logo a {
-        background-image: url(../img/main-img/image.png);
+        background-image: url(../img/image.png);
     }
 
     .btn-menu {

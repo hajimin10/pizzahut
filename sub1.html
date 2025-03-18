@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>주문</title>
+        <!-- CDN  -->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="./css/reset.css" />
+        <link rel="stylesheet" href="./css/common.css" />
+        <link rel="stylesheet" href="./css/sub1.css" />
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="./js/script.js"></script>
+    </head>
+    <body>
+        <a href="#main" class="hidden">메뉴 바로가기</a>
+        <hr />
+
+        <!-- s:header -->
+        <header id="header">
+            <nav>
+                <h1 class="logo">
+                    <a href="./index.html">
+                        <i class="hidden">pizza hut</i>
+                    </a>
+                </h1>
+                <ul class="gnb">
+                    <li>
+                        <a href="./sub.html"><i>메뉴</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">전체 메뉴</a></li>
+                            <li><a href="#">피자 메뉴</a></li>
+                            <li><a href="#">사이드 메뉴</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./sub1.html"><i>주문</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">단체주문</a></li>
+                            <li><a href="#">E쿠폰 주문</a></li>
+                            <li><a href="#">지류 상품권</a></li>
+                            <li><a href="#">모바일 상품권</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="./sub2.html"><i>이벤트&제휴</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">이벤트</a></li>
+                            <li><a href="#">제휴할인</a></li>
+                            <li><a href="#">사이드 메뉴</a></li>
+                            <li><a href="#">멤버십</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i>창업안내</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">성공창업관</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#"><i>피자헛 소식</i></a>
+                        <ul class="submenu">
+                            <li><a href="#">브랜드</a></li>
+                            <li><a href="#">인재 채용</a></li>
+                            <li><a href="#">공지사항</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div class="util-menu">
+                    <button type="button" class="btn-search">
+                        <i class="ri-search-line"></i>
+                        <i class="hidden">검색</i>
+                    </button>
+                    <button type="button" class="btn-shopping">
+                        <i class="ri-shopping-bag-fill"></i>
+                        <i class="hidden">장바구니</i>
+                    </button>
+                    <button type="button" class="btn-information">
+                        <i class="ri-account-circle-line"></i>
+                        <i class="hidden">마이페이지</i>
+                    </button>
+                </div>
+                <!-- button:button.btn-menu>i.hidden{메뉴} -->
+                <!--태블릿 햄버거 메뉴 만들기 -->
+                <button type="button" class="btn-menu">
+                    <i class="hidden">메뉴</i>
+                </button>
+            </nav>
+        </header>
+
+        <!-- .tab>ul.tab-menu+.tab-contents -->
+        <section class="order">
+            <div class="tab">
+                <!-- 탭메뉴 -->
+                <ul class="tab-menu">
+                    <!-- li*3>a{탭메뉴$} -->
+                    <li><a href="#tab1">단체주문</a></li>
+                    <li><a href="#tab2">E쿠폰 주문</a></li>
+                    <li><a href="#tab3">지류 상품권</a></li>
+                </ul>
+                <!-- 보여질 콘텐츠 전체 -->
+                <div class="tab-contents">
+                    <!-- .tab-item*3>h2+p -->
+                    <div class="tab-item" id="tab1">
+                        <h2>단체주문</h2>
+
+                        <div class="inform">
+                            <div class="inform-box">
+                                <div class="check">
+                                    <input type="checkbox" id="agree" />
+                                    <label for="agree">개인정보 수집 및 이용(필수)</label>
+                                </div>
+                                <form action="#" method="post">
+                                    <button type="submit" class="inform-E">자세히 보기</button>
+                                </form>
+                            </div>
+                            <div class="inform-list">
+                                <div class="inform-con">
+                                    <h3>
+                                        주문자
+                                        <span class="nec">*</span>
+                                    </h3>
+                                    <input
+                                        type="text"
+                                        class="inform-input"
+                                        placeholder="이름 및 기업명을 입력해 주세요."
+                                        maxlength="20"
+                                        minlength="12"
+                                    />
+                                </div>
+                                <div class="inform-con">
+                                    <h3>
+                                        휴대폰번호
+                                        <span class="nec">*</span>
+                                    </h3>
+                                    <input
+                                        type="text"
+                                        class="inform-input"
+                                        placeholder="휴대폰 번호를 입력해 주세요."
+                                        maxlength="20"
+                                        minlength="12"
+                                    />
+                                </div>
+                                <div class="inform-con">
+                                    <h3>
+                                        이메일
+                                        <span class="nec">*</span>
+                                    </h3>
+                                    <input
+                                        type="text"
+                                        class="inform-input"
+                                        placeholder="이메일을 입력해 주세요."
+                                        maxlength="20"
+                                        minlength="12"
+                                    />
+                                </div>
+                                <button type="submit" class="btn-receipt">접수</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tab-item" id="tab2">
+                        <h2>E쿠폰 주문</h2>
+                        <div class="inform">
+                            <div class="e-con">
+                                <strong> E쿠폰(기프티콘, 모바일상품권등)으로 피자를 주문하세요.</strong>
+                                <form action="#" method="post">
+                                    <button type="submit" class="btn-E">이용방법</button>
+                                </form>
+                            </div>
+                            <input
+                                type="text"
+                                class="coupon-input"
+                                placeholder="12~16자리 번호를 입력하세요. [하이푼(-)제외]"
+                                maxlength="16"
+                                minlength="12"
+                            />
+                            <p>※피자헛에서 제공하는 무료 콜라, 파스타, 할인쿠폰 등은 쿠폰함에서 확인하세요.</p>
+                        </div>
+                    </div>
+                    <div class="tab-item" id="tab3">
+                        <h2>지류 상품권</h2>
+                        <div class="inform">
+                            <div class="inform-list">
+                                <div class="inform-con">
+                                    <h3>
+                                        주문자
+                                        <span class="nec">*</span>
+                                    </h3>
+                                    <input
+                                        type="text"
+                                        class="inform-input"
+                                        placeholder="이름 및 기업명을 입력해 주세요."
+                                        maxlength="20"
+                                        minlength="12"
+                                    />
+                                </div>
+                                <div class="inform-con">
+                                    <h3>
+                                        휴대폰번호
+                                        <span class="nec">*</span>
+                                    </h3>
+                                    <input
+                                        type="text"
+                                        class="inform-input"
+                                        placeholder="휴대폰 번호를 입력해 주세요."
+                                        maxlength="20"
+                                        minlength="12"
+                                    />
+                                </div>
+                                <button type="submit" class="btn-receipt">주문조회</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- s:footer -->
+        <footer id="footer">
+            <strong class="foot-logo"><img src="./img/logo2.png" alt="로고" /></strong>
+
+            <div class="foot-con">
+                <div class="foot-link">
+                    <ul>
+                        <li><a href="#">이용약관</a></li>
+                        <li><a href="#">개인정보처리방침</a></li>
+                        <li><a href="#">공지사항</a></li>
+                        <li><a href="#">창업안내</a></li>
+                        <li><a href="#">대표번호 1588-5588(운영시간 10:30 ~ 22:00)</a></li>
+                    </ul>
+                </div>
+                <div class="foot-copyright">
+                    <p>서울시 영등포구 국회대로 74길 4, 9~11층</p>
+                    <p>사업자등록번호 120-81-63948</p>
+                    <p>통신판매업신고번호 제2018-서울영등포-1220호</p>
+                    <p>한국피자헛유한회사 대표이사 : 조윤상</p>
+                    <p>개인정보 보호책임자 : 손정완</p>
+                </div>
+            </div>
+
+            <ul class="foot-sns">
+                <li>
+                    <a href="#"><img src="./img/icon-insta.jpg" alt="인스타그램" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/facebook.png" alt="페이스북" /></a>
+                </li>
+                <li>
+                    <a href="#"><img src="./img/twitter.png" alt="트위터" /></a>
+                </li>
+            </ul>
+        </footer>
+        <hr />
+        <!-- Sidebar Container -->
+        <div class="sidebar">
+            <a href="#order" class="sidebar-item">
+                <i class="ri-map-pin-line"></i>
+            </a>
+            <a href="#contact" class="sidebar-item">
+                <i class="ri-headphone-line"></i>
+            </a>
+        </div>
+
+        <a href="#top" id="scrollToTopBtn">↑</a>
+    </body>
+</html>
